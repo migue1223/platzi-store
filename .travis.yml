@@ -1,19 +1,20 @@
 language: node_js
-
 cache:
   directories:
     - node_modules
     - ~/.npm
-
 node_js:
   - '12'
-
 git:
   depth: 3
-
 script:
   - yarn build
-
+notifications:
+  email:
+    recipients:
+      - jta1223@gmail.com
+    on_success: always
+    on_failure: always  
 deploy:
   provider: pages
   skip-cleanup: true
